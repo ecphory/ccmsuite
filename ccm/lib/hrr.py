@@ -47,6 +47,11 @@ class HRR:
     def convolve(self,other):
         x=ifft(fft(self.v)*fft(other.v)).real
         return HRR(data=x)
+        
+    def permute(self,permutation):
+        permutedVector = self.v[permutation]
+        return HRR(data=permutedVector)
+        
     def __rmul__(self,other):
         if isinstance(other,HRR):
             x=ifft(fft(self.v)*fft(other.v)).real
@@ -212,5 +217,3 @@ class Vocabulary:
         perror1=num/denom    
         pcorrect=(1-perror1)**vocab_size
         return pcorrect
-        
-        
