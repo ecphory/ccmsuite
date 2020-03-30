@@ -1,5 +1,6 @@
 from ccm.lib.actr.buffer import Buffer, Chunk
 from ccm.lib.actr.dm import *
+from ccm.lib.actr.hdm import HDM
 from ccm.lib.actr.pm import *
 from ccm.lib.actr.compile import PMCompile
 from ccm.lib.actr.sosvision import SOSVision
